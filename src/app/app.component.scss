@@ -1,0 +1,27 @@
+.dfd-chip {
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  white-space: nowrap;
+  &:hover {
+    span {
+      display: inline;
+    }
+  }
+  span {
+    display: none;
+    margin-inline-start: 7px;
+    font-size: 13px;
+    transition: 0.3s;
+    overflow: hidden;
+    height: 100%;
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
+span {
+  &:focus-visible {
+    outline: 0px solid transparent;
+  }
+}

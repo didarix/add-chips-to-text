@@ -1,0 +1,30 @@
+<div class="dfb-custom-chips-component px-4">
+  <!-- form field -->
+  <div class="d-flex justify-content-end py-4">
+    <div class="form-field-controller">
+      <select class="form-control" (change)="addChips($event)">
+        <option [value]="item.label" *ngFor="let item of formFields">
+          {{ item.label }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <!-- chip text -->
+  <div
+    class="dfb-chip-text mt-3 border border-2 d-flex align-items-center rounded p-2"
+  >
+    <div
+      [innerHTML]="inputChipsValue"
+      #inputChips
+      id="text3"
+      contenteditable
+      data-text="please enter subject"
+      class="w-100"
+      (click)="getMousePosition()"
+      (input)="onTextChange()"
+      (keydown.enter)="$event.preventDefault()"
+    >
+      <br />
+    </div>
+  </div>
+</div>

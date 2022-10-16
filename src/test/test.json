@@ -1,0 +1,56 @@
+   // const el: any = document.getElementById("test");
+    // if (action != "click") {
+    //   this.textArray = event.target.innerText.split(" ").map((text) => {
+    //     console.log(text);
+    //     return { content: text + " ", istag: false };
+    //   });
+    // }
+    // let position = 0;
+    // const isSupported = typeof window.getSelection !== "undefined";
+    // if (isSupported) {
+    //   const selection: any = window.getSelection();
+    //   if (selection.rangeCount !== 0) {
+    //     const range = window.getSelection().getRangeAt(0);
+    //     const preCaretRange = range.cloneRange();
+    //     preCaretRange.selectNodeContents(this.el.nativeElement);
+    //     preCaretRange.setEnd(range.endContainer, range.endOffset);
+    //     position = preCaretRange.toString().length;
+    //     preCaretRange.setStart(this.el.nativeElement.childNodes[2], 3);
+    //     const text = "welcome";
+    //     el.focus();
+    //     el.setRangeText(text, 1, 1, "select");
+    //     console.log(selection.baseNode);
+    //   }
+    // }
+    // console.log(position, "index");
+    // return position;
+
+
+
+        // this.textArray = event.target.innerText.split(" ").map((text) => {
+    //   return { content: text + " ", istag: false, id: this.newId };
+    // });
+
+
+    console.log("event", event.target, "item", item, "index", index);
+    console.log(this.el.nativeElement.innerText);
+
+    this.currentIndex = index ? index : 0;
+    const text = event.target.innerText;
+
+    if (event.key == " ") {
+      this.el.nativeElement.innerText = "";
+      this.textArray[this.currentIndex] = {
+        content: text,
+        istag: false,
+        id: this.newId,
+      };
+    }
+    console.log(text);
+    console.log(this.textArray);
+
+    // this.textArray.splice(2, 0, "Lene");
+
+
+
+    

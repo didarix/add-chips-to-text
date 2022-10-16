@@ -1,0 +1,31 @@
+<div class="dfb-custom-chips-component">
+  <!-- form field -->
+  <div class="d-flex justify-content-end pt-4">
+    <div class="form-field-controller">
+      <dfb-dropdown
+        [options]="formFields"
+        optionLabel="label"
+        optionValue="value"
+        (dropdownChanged)="addChips($event)"
+      ></dfb-dropdown>
+    </div>
+  </div>
+  <!-- chip text -->
+  <div
+    class="dfb-chip-text mt-3 border border-2 d-flex align-items-center rounded p-2"
+  >
+    <div
+      [innerHTML]="inputChipsValue"
+      id="inputChipsValue"
+      #inputChips
+      contenteditable
+      data-text="please enter subject"
+      class="w-100"
+      (input)="onTextChange()"
+      (click)="deleteTag($event)"
+      (keydown.enter)="$event.preventDefault()"
+    >
+      <br />
+    </div>
+  </div>
+</div>
